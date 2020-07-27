@@ -52,7 +52,7 @@ def test_depth_with_objects_and_one_depth_till_level_3(capfd):
     assert out == 'key1 : 1\nkey2 : 1\nkey3 : 2\nkey4 : 2\nkey5 : 3\nuser : 3\nfirst_name : 4\nlast_name : 4\nfather : 4\n' \
                     + 'first_name : 5\nlast_name : 5\nfather : 5\n'
 
-def test_lca():
+def test_lca(capfd):
     v_1 = Node(1)
     v_2 = Node(2)
     v_3 = Node(3)
@@ -68,12 +68,35 @@ def test_lca():
     v_8.parent = v_9.parent = v_4
     v_7.parent = v_6.parent = v_3
 
-    assert lca(v_7, v_6) == 3
-    assert lca(v_3, v_7) == 3
-    assert lca(v_1, v_1) == 1
-    assert lca(v_unconnected, v_9) == -1
-    assert lca(None, v_7) == -1
-    assert lca(None, None) == -1
+    lca(v_7, v_6)
+    out, err = capfd.readouterr()
+    assert out == '3\n'
+
+    lca(v_3, v_7)
+    out, err = capfd.readouterr()
+    assert out == '3\n'
+
+    lca(v_1, v_1)
+    out, err = capfd.readouterr()
+    assert out == '1\n'
+
+    lca(v_8, v_7)
+    out, err = capfd.readouterr()
+    assert out == '1\n'
+
+    lca(v_unconnected, v_7)
+    out, err = capfd.readouterr()
+    assert out == ''
+
+    lca(None, v_7)
+    out, err = capfd.readouterr()
+    assert out == ''
+
+    lca(None, None)
+    out, err = capfd.readouterr()
+    assert out == ''
+
+
 
 
 
