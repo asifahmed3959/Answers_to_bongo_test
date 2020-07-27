@@ -40,6 +40,5 @@ a Python object in addition to a dictionary from Question 1.
 Common Ancestor and print its value.
     - The answer to this question is the function named lca from line 41 to 57 of questions.py script. 
     - The time complexity for this problem in worst case scenario is O(n) and space complexity is also O(n).
-    - The function returns -1 if no common ancester is found.
     - The test cases checks the usual sample send with the question along with empty cases, disconnected nodes, and other possible cases. 
 
