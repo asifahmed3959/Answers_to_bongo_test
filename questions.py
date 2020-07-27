@@ -1,37 +1,28 @@
-
 # 1) Write the following function’s body. A nested dictionary is passed as parameter. You need to
 #    print all keys with their depth.
 def print_depth(a, level=1):
     for i in a.keys():
         if type(a[i]) == dict:
-
             print(i + ' : ' + str(level))
-
             print_depth(a[i], level + 1)
 
         else:
-
             print(i + ' : ' + str(level))
-
 
 # 2) Write a new function with same functionality from Question 1, but it should be able to handle
 # a Python object in addition to a dictionary from Question 1.
 def print_depth_with_objects(a, level=1):
     for i in a.keys():
         if type(a[i]) == dict:
-
             print(i + ' : ' + str(level))
-
             print_depth_with_objects(a[i], level+1)
 
         elif isinstance(a[i], Person):
             print(i + ' : ' + str(level))
-
             print_person_dfs(a[i], level + 1)
 
         else:
             print(i + ' : ' + str(level))
-
 
 #function is related to answer2
 def print_person_dfs(person, level=1):
@@ -44,7 +35,6 @@ def print_person_dfs(person, level=1):
 
     else:
         print("father : " + str(level))
-
 
 # 3) Write following functions body. 2 Nodes are passed as parameter. You need to find Least
 # Common Ancestor and print its value.
