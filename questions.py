@@ -38,6 +38,7 @@ def print_person_dfs(person, level=1):
 
 # 3) Write following functions body. 2 Nodes are passed as parameter. You need to find Least
 # Common Ancestor and print its value.
+# The time complexity for this problem in worst case scenario is O(n) and space complexity is also O(n).
 def lca(node1, node2):
     d = {}
     temp = node1
@@ -50,11 +51,10 @@ def lca(node1, node2):
 
     while(temp!=None):
         if temp.val in d:
-            return temp.val
+            print(temp.val)
+            return
         else:
             temp=temp.parent
-
-    return -1
 
 
 #class Person for Person Object
