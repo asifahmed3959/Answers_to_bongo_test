@@ -34,11 +34,11 @@ print all keys with their depth.
 2) Write a new function with same functionality from Question 1, but it should be able to handle
 a Python object in addition to a dictionary from Question 1.
     - The answer to this question is the function named print_depth_with_objects from line 14 to 25 of questions.py script along with a helped function from line 28 to 37.
-    - For testing the same sample was used to unit testing 
+    - For testing the same sample was used to unit testing, followed by a dictionary with only objects, and an empty dictionary 
 
 3) Write following functions body. 2 Nodes are passed as parameter. You need to find Least
 Common Ancestor and print its value.
     - The answer to this question is the function named lca from line 41 to 57 of questions.py script. 
     - The time complexity for this problem in worst case scenario is O(n) and space complexity is S(p) = n.
-    - The test cases checks the usual sample send with the question along with empty cases, disconnected nodes, and other possible cases. 
+    - The test cases checks the usual sample send with the question along with empty cases, disconnected nodes, edge cases and other possible cases. 
 
